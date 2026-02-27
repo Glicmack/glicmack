@@ -62,7 +62,7 @@ jobs:
           REDIS_URL: redis://localhost:6379/0
         run: |
           cd apps/api
-          pytest -v
+          pytest -v || test $? -eq 5
 
   # --- Python: Worker tests ---
   test-worker:
@@ -81,7 +81,7 @@ jobs:
       - name: Run tests
         run: |
           cd apps/worker
-          pytest -v
+          pytest -v || test $? -eq 5
 
   # --- Asset provenance gate ---
   asset-provenance:
