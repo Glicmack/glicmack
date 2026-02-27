@@ -1,0 +1,66 @@
+{
+  "catalog_version": "1.0.0",
+  "packs": [
+    {
+      "pack_id": "neon_cyber",
+      "display_name": "Neon Cyber",
+      "description": "Neon-lit cyberpunk cityscape with glowing obstacles and synthwave vibes",
+      "keywords": ["neon", "cyber", "cyberpunk", "futuristic", "sci-fi", "city", "rain", "dark"],
+      "ground_material": "StylePacks/neon_cyber/Materials/ground",
+      "obstacle_material": "StylePacks/neon_cyber/Materials/obstacle",
+      "collectible_material": "StylePacks/neon_cyber/Materials/collectible",
+      "player_material": "StylePacks/neon_cyber/Materials/player",
+      "skybox_material": "StylePacks/neon_cyber/Materials/skybox",
+      "directional_light_color": "#4466FF",
+      "directional_light_intensity": 0.6,
+      "ambient_color": "#111133",
+      "fog_enabled": true,
+      "fog_color": "#0A0A2E",
+      "fog_density": 0.02,
+      "bloom_intensity": 1.2,
+      "chromatic_aberration": 0.15,
+      "side_decoration_prefabs": [
+        "StylePacks/neon_cyber/Prefabs/building_01",
+        "StylePacks/neon_cyber/Prefabs/building_02",
+        "StylePacks/neon_cyber/Prefabs/neon_sign_01",
+        "StylePacks/neon_cyber/Prefabs/lamp_post"
+      ],
+      "particle_effects": [
+        "StylePacks/neon_cyber/Particles/rain",
+        "StylePacks/neon_cyber/Particles/neon_flicker"
+      ],
+      "ui_skin": "StylePacks/neon_cyber/UI/skin",
+      "font_asset": "StylePacks/neon_cyber/Fonts/cyber_font",
+      "available_music_tracks": ["synthwave_01", "darkwave_01"],
+      "ambient_sfx": "StylePacks/neon_cyber/Audio/city_ambience"
+    },
+    {
+      "pack_id": "minimal_clean",
+      "display_name": "Minimal Clean",
+      "description": "Clean, modern aesthetic with flat colors and simple geometry",
+      "keywords": ["minimal", "clean", "modern", "simple", "flat", "white", "geometric"],
+      "ground_material": "StylePacks/minimal_clean/Materials/ground",
+      "obstacle_material": "StylePacks/minimal_clean/Materials/obstacle",
+      "collectible_material": "StylePacks/minimal_clean/Materials/collectible",
+      "player_material": "StylePacks/minimal_clean/Materials/player",
+      "skybox_material": "StylePacks/minimal_clean/Materials/skybox",
+      "directional_light_color": "#FFFFFF",
+      "directional_light_intensity": 1.0,
+      "ambient_color": "#EEEEEE",
+      "fog_enabled": false,
+      "fog_color": "#FFFFFF",
+      "fog_density": 0.0,
+      "bloom_intensity": 0.3,
+      "chromatic_aberration": 0.0,
+      "side_decoration_prefabs": [
+        "StylePacks/minimal_clean/Prefabs/pillar_01",
+        "StylePacks/minimal_clean/Prefabs/tree_abstract"
+      ],
+      "particle_effects": [],
+      "ui_skin": "StylePacks/minimal_clean/UI/skin",
+      "font_asset": "StylePacks/minimal_clean/Fonts/clean_sans",
+      "available_music_tracks": ["ambient_chill_01"],
+      "ambient_sfx": null
+    }
+  ]
+}

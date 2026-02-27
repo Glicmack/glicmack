@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Unity (template development)
+templates/unity/Library/
+templates/unity/Temp/
+templates/unity/Obj/
+templates/unity/Builds/
+templates/unity/Logs/
+templates/unity/.vs/
+templates/unity/*.csproj
+templates/unity/*.sln
+
+# Unreal
+templates/unreal/Binaries/
+templates/unreal/Intermediate/
+templates/unreal/Saved/
+templates/unreal/DerivedDataCache/
+
+# Docker
+postgres_data/
+
+# Build artifacts
+*.zip
+*.tar.gz

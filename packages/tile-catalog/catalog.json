@@ -1,0 +1,149 @@
+{
+  "catalog_version": "1.0.0",
+  "tiles": [
+    {
+      "tile_id": "empty_01",
+      "category": "empty",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "empty"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.0,
+      "tags": ["safe", "breathing_room"]
+    },
+    {
+      "tile_id": "collectible_center",
+      "category": "collectible",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "collectible"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.0,
+      "tags": ["reward", "guide_center"]
+    },
+    {
+      "tile_id": "collectible_left",
+      "category": "collectible",
+      "lanes": [
+        {"lane_index": 0, "content_type": "collectible"},
+        {"lane_index": 1, "content_type": "empty"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.0,
+      "tags": ["reward", "guide_left"]
+    },
+    {
+      "tile_id": "obstacle_barrier_left",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 1, "content_type": "empty"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.2,
+      "tags": ["barrier", "single_lane"]
+    },
+    {
+      "tile_id": "obstacle_barrier_center",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.2,
+      "tags": ["barrier", "single_lane"]
+    },
+    {
+      "tile_id": "obstacle_barrier_right",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "empty"},
+        {"lane_index": 2, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.2,
+      "tags": ["barrier", "single_lane"]
+    },
+    {
+      "tile_id": "obstacle_barrier_double_lr",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 1, "content_type": "empty"},
+        {"lane_index": 2, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.5,
+      "tags": ["barrier", "double_lane", "force_center"]
+    },
+    {
+      "tile_id": "obstacle_barrier_double_lc",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.5,
+      "tags": ["barrier", "double_lane", "force_right"]
+    },
+    {
+      "tile_id": "obstacle_wall_low_center",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "wall_low", "height": "low"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": ["slide"],
+      "difficulty_rating": 0.4,
+      "tags": ["wall_low", "slide_required", "single_lane"]
+    },
+    {
+      "tile_id": "obstacle_wall_high_center",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "wall_high", "height": "high"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": ["jump"],
+      "difficulty_rating": 0.4,
+      "tags": ["wall_high", "jump_required", "single_lane"]
+    },
+    {
+      "tile_id": "mixed_reward_obstacle_01",
+      "category": "mixed",
+      "lanes": [
+        {"lane_index": 0, "content_type": "collectible"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "barrier", "height": "ground"},
+        {"lane_index": 2, "content_type": "collectible"}
+      ],
+      "min_abilities": [],
+      "difficulty_rating": 0.3,
+      "tags": ["mixed", "reward_guide"]
+    },
+    {
+      "tile_id": "gap_center",
+      "category": "obstacle",
+      "lanes": [
+        {"lane_index": 0, "content_type": "empty"},
+        {"lane_index": 1, "content_type": "obstacle", "obstacle_variant": "gap", "height": "ground"},
+        {"lane_index": 2, "content_type": "empty"}
+      ],
+      "min_abilities": ["jump"],
+      "difficulty_rating": 0.4,
+      "tags": ["gap", "jump_required"]
+    }
+  ]
+}

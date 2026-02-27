@@ -1,0 +1,94 @@
+version: "3.8"
+
+services:
+  # --- PostgreSQL ---
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: glicmack
+      POSTGRES_PASSWORD: glicmack_dev
+      POSTGRES_DB: glicmack
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U glicmack"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # --- Redis ---
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # --- FastAPI Backend ---
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://glicmack:glicmack_dev@postgres:5432/glicmack
+      REDIS_URL: redis://redis:6379/0
+      OLLAMA_HOST: http://host.docker.internal:11434
+      ENV: development
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./apps/api/src:/app/src
+      - ./packages:/app/packages
+
+  # --- Celery Parse Worker (lightweight) ---
+  worker-parse:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile
+    command: celery -A src.celery_app worker -Q parse -c 2 --loglevel=info
+    environment:
+      DATABASE_URL: postgresql+asyncpg://glicmack:glicmack_dev@postgres:5432/glicmack
+      REDIS_URL: redis://redis:6379/0
+      OLLAMA_HOST: http://host.docker.internal:11434
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./apps/worker/src:/app/src
+      - ./packages:/app/packages
+
+  # --- Celery Build Worker (heavy, concurrency=1) ---
+  worker-build:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile
+    command: celery -A src.celery_app worker -Q build -c 1 --loglevel=info
+    environment:
+      DATABASE_URL: postgresql+asyncpg://glicmack:glicmack_dev@postgres:5432/glicmack
+      REDIS_URL: redis://redis:6379/0
+      BUILD_MACHINE_HOST: ${BUILD_MACHINE_HOST:-localhost}
+      BUILD_MACHINE_KEY: ${BUILD_MACHINE_KEY:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./apps/worker/src:/app/src
+      - ./packages:/app/packages
+      - ./templates:/app/templates
+
+volumes:
+  postgres_data:
