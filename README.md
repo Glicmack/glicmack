@@ -4,7 +4,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0a0b,50:4f8fff,100:00d4aa&height=220&section=header&text=Prince%20Vekariya&fontSize=50&fontColor=ffffff&fontAlignY=35&desc=AI%20Engineer%20%7C%20Founder%20of%20GLICMACK%20%7C%20I%20build%20AI%20that%20actually%20ships&descSize=18&descColor=c0c0c0&descAlignY=55&animation=fadeIn" width="100%" />
 
 <!-- TYPING SVG -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=4F8FFF&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=600&height=80&lines=%F0%9F%94%A7+Building+production+AI+systems;%F0%9F%8E%AE+Creating+GLICMACK+%E2%80%94+Game+Gen+AI;%F0%9F%A6%B7+Voice+Agents+%7C+RAG+%7C+3D+Generation;%F0%9F%9A%80+I+don't+prototype+%E2%80%94+I+ship" alt="Typing SVG" /></a>
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Syne&weight=700&size=35&duration=3000&pause=1000&color=4F8FFF&center=true&vCenter=true&width=600&lines=AI+Engineer;Founder+of+GLICMACK;I+Build+AI+That+Actually+Ships;Open+to+Freelance)
 
 <br/>
 
@@ -211,11 +211,25 @@ Company website for THE END INFOTECH — offering web development and AI solutio
 
 ---
 
-## <img src="https://img.shields.io/badge/-ACTIVITY-00d4aa?style=flat-square" /> Contribution Graph
+## <img src="https://img.shields.io/badge/-ACTIVITY-00d4aa?style=flat-square" /> Activity Graph
 
 <div align="center">
 
-[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Glicmack&theme=tokyo-night&hide_border=true&bg_color=0a0a0b&color=4f8fff&line=00d4aa&point=4f8fff&area=true&area_color=4f8fff)](https://github.com/Glicmack)
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Glicmack&theme=tokyo-night&hide_border=true&bg_color=0a0a0b&color=4f8fff&line=00d4aa&point=4f8fff)
+
+</div>
+
+---
+
+## <img src="https://img.shields.io/badge/-SNAKE-4f8fff?style=flat-square" /> Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Glicmack/Glicmack/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Glicmack/Glicmack/output/github-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/Glicmack/Glicmack/output/github-snake-dark.svg" />
+</picture>
 
 </div>
 
